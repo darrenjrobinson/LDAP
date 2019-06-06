@@ -3,6 +3,10 @@ LDAP Functions
 FORK of https://www.powershellgallery.com/packages/Ldap/0.1.0.17/Content/Ldap.psm1
 Addition of Timeout (seconds) for Get-LdapConnection
 #>
+
+# Need to reference to .NET assembly used in the script.
+Add-Type -AssemblyName System.DirectoryServices.Protocols
+
 function Get-LdapConnection {
     [CmdletBinding()]
     param(
